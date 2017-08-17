@@ -8,9 +8,11 @@ def app( environ, start_response ):
     ]
 
     if environ['QUERY_STRING'] != '':
-        msg = "\n".join(environ['QUERY_STRING'].split("&"))
+        for line in environ["QUERY_STRING"].split("&"):
+        msg = msg+line+"\n"
+        
     else:
-        msg = ""
+        msg = " "
 
     start_response(status, headers)
-    return iter([ msg ])
+    return msg

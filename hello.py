@@ -9,7 +9,7 @@ def app( environ, start_response ):
 
     if environ['QUERY_STRING'] != '':
         for line in environ["QUERY_STRING"].split("&"):
-        msg = msg+line+"\n"
+            msg = msg+line+"\n"
         
     else:
         msg = " "

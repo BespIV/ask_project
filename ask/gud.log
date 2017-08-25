@@ -1,0 +1,129 @@
+2017-08-25 17:22:36 [103] [INFO] Starting gunicorn 17.5
+2017-08-25 17:22:36 [103] [DEBUG] Arbiter booted
+2017-08-25 17:22:36 [103] [INFO] Listening at: http://0.0.0.0:8000 (103)
+2017-08-25 17:22:36 [103] [INFO] Using worker: sync
+2017-08-25 17:22:36 [108] [INFO] Booting worker with pid: 108
+2017-08-25 17:22:36 [109] [INFO] Booting worker with pid: 109
+2017-08-25 17:23:06 [109] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/urls/resolvers.py", line 270, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/box/web/ask/ask/urls.py", line 21, in <module>
+    url(r'^$', include('qa.urls')),
+NameError: name 'include' is not defined
+2017-08-25 17:23:06 [109] [ERROR] Error processing request.
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 88, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 132, in handle_request
+    resp.write(item)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/http/wsgi.py", line 301, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 305, in write
+    return write_chunk(sock, data)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 300, in write_chunk
+    sock.sendall(chunk)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 104] Connection reset by peer
+2017-08-25 17:23:06 [108] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/urls/resolvers.py", line 270, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/box/web/ask/ask/urls.py", line 21, in <module>
+    url(r'^$', include('qa.urls')),
+NameError: name 'include' is not defined
+2017-08-25 17:35:50 [103] [INFO] Handling signal: term
+2017-08-25 17:35:50 [109] [INFO] Worker exiting (pid: 109)
+2017-08-25 17:35:50 [108] [INFO] Worker exiting (pid: 108)
+2017-08-25 17:35:50 [103] [INFO] Shutting down: Master
+2017-08-25 17:35:50 [230] [INFO] Starting gunicorn 17.5
+2017-08-25 17:35:50 [230] [DEBUG] Arbiter booted
+2017-08-25 17:35:50 [230] [INFO] Listening at: http://0.0.0.0:8000 (230)
+2017-08-25 17:35:50 [230] [INFO] Using worker: sync
+2017-08-25 17:35:50 [235] [INFO] Booting worker with pid: 235
+2017-08-25 17:35:50 [236] [INFO] Booting worker with pid: 236
+2017-08-25 17:35:56 [236] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/urls/resolvers.py", line 270, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/box/web/ask/ask/urls.py", line 21, in <module>
+    url(r'^$', include('qa.urls')),
+NameError: name 'include' is not defined
+2017-08-25 17:35:56 [235] [DEBUG] GET /
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/urls/resolvers.py", line 270, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/box/web/ask/ask/urls.py", line 21, in <module>
+    url(r'^$', include('qa.urls')),
+NameError: name 'include' is not defined
+2017-08-25 17:39:23 [230] [INFO] Handling signal: term
+2017-08-25 17:39:23 [235] [INFO] Worker exiting (pid: 235)
+2017-08-25 17:39:23 [236] [INFO] Worker exiting (pid: 236)
+2017-08-25 17:39:23 [230] [INFO] Shutting down: Master
+2017-08-25 17:39:23 [354] [INFO] Starting gunicorn 17.5
+2017-08-25 17:39:23 [354] [DEBUG] Arbiter booted
+2017-08-25 17:39:23 [354] [INFO] Listening at: http://0.0.0.0:8000 (354)
+2017-08-25 17:39:23 [354] [INFO] Using worker: sync
+2017-08-25 17:39:23 [359] [INFO] Booting worker with pid: 359
+2017-08-25 17:39:23 [362] [INFO] Booting worker with pid: 362

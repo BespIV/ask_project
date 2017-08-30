@@ -14,15 +14,12 @@ class Question(models.Model):
 	text = models.TextField()
 	added_at = models.DateTimeField(auto_now_add = True)
 	rating = models.IntegerField()
-	author = models.ForeignField(User)
-	likes = models.ForeignField(Likes)
+	author = models.CharField()
+	likes = models.ForeignField(User, null = True)
 
-class Likes(models.Model):
-	question = models.ForeignField(Question, related_name = "like_question")
-	user = models.ForeignField(User)
 
 class Answer(modles.Model):
 	text = models.TextField()
 	added_at = models.DateTimeField(auto_now_add = True)
-	question = models.ForeignField(Question)
-	author = models.ForeignField(User)
+	question = models.ForeignField(Question, null = True)
+	author = models.CharField()

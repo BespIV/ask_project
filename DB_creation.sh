@@ -1,5 +1,5 @@
 sudo /etc/init.d/mysql start
-mysql -u root -e "CREATE USER 'box'@'localhost'"
-mysql -u root -e "SET PASSWORD FOR 'box'@'localhost' = PASSWORD('pass111')"
-mysql -u root -e "CREATE DATABASE mybase"
-mysql -u root -e "GRANT ALL ON mybase.* TO 'box'@'localhost'"
+sudo mysql -uroot -e "CREATE USER 'admin'@'localhost'"
+sudo mysql -uroot -e "SET PASSWORD FOR 'admin'@'localhost' = PASSWORD('pass111')"
+sudo mysql -uroot -e "CREATE DATABASE mybase"
+sudo mysql -uroot -e "GRANT ALL ON mybase.* TO 'admin'@'localhost'"

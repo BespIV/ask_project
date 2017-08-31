@@ -15,16 +15,16 @@ class Question(models.Model):
 	added_at = models.DateTimeField(auto_now_add = True)
 	rating = models.IntegerField(default = 0)
 	author = models.ForeignKey(User, default="None")
-	likes = models.ManytoMany(User, Through="Likes")
+	likes = models.ManyToManyField(User, related_name="question-like-user+")
 	def __str__(self):
 		return self.title
-
+'''
 class Likes(models.Model):
 	question = models.ForeignKey(Question, related_name="like_question")
 	user = models.ForeignKey(User, related_name="like_user")
+'''
 
-
-class Answer(modles.Model):
+class Answer(models.Model):
 	text = models.TextField()
 	added_at = models.DateTimeField(auto_now_add = True)
 	question = models.ForeignKey(Question, null = True)
